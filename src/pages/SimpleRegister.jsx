@@ -10,6 +10,7 @@ function SimpleRegister() {
             userName:"",
         }
     })
+    console.log("formik",formik.initialValues)
   return (
     <div>SimpleRegister</div>
   )
