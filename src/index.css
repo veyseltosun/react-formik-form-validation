@@ -20,7 +20,7 @@ code {
   margin: auto;
   padding: 15px;
   width: 60%;
-  height: 60%;
+  height: 80%;
   background-color: aqua;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,9 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 20px;
   
+
 }
 
 .btn-submit{
