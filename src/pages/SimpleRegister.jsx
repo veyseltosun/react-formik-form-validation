@@ -27,6 +27,8 @@ function SimpleRegister() {
             <label htmlFor='userName' >User Name</label>
             <input type="text" id="userName" name="userName" 
             onChange={formik.handleChange} value={formik.values.userName}></input>
+
+            <button className='btn-submit'>Submit</button>
         </form>
 
     </div>

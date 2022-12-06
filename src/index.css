@@ -30,4 +30,15 @@ code {
   margin: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  
+}
+
+.btn-submit{
+
+  
+  width: 60px;
+  height: 30px;
+  
+
 }
