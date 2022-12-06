@@ -35,12 +35,30 @@ code {
   
 
 }
-
+input{
+  border: none;
+  height: 30px;
+  width: 100%;
+  border-radius: 3px;
+  margin: 7px;
+  padding: 5px;
+}
+label{
+  
+}
 .btn-submit{
 
-  
+  margin: 10px;
   width: 60px;
   height: 30px;
-  
-
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+label{
+  align-items: flex-start;
+}
+.btn-submit:hover{
+  background-color: bisque;
+  color: blue;
 }
