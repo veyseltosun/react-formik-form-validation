@@ -10,12 +10,12 @@ function SimpleRegister() {
             userName:"",
         }
     })
-    console.log("formik",formik.initialValues)
+    console.log("formik",formik.values)
   return (
     <div className='container'>
 
         <h1>Simple Form</h1>
-        <form className='formStyle'>
+        <form className='formStyle' onSubmit={formik.handleSubmit}>
             <label htmlFor='name' >Name</label>
             <input type="text" id="name" name="name" 
             onChange={formik.handleChange} value={formik.values.name}></input>
