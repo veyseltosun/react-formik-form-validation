@@ -22,11 +22,11 @@ function SimpleRegister() {
 
             <label htmlFor='email' >Email</label>
             <input type="text" id="email" name="email" 
-            onChange={formik.handleChange} value={formik.values.name}></input>
+            onChange={formik.handleChange} value={formik.values.email}></input>
 
             <label htmlFor='userName' >User Name</label>
             <input type="text" id="userName" name="userName" 
-            onChange={formik.handleChange} value={formik.values.name}></input>
+            onChange={formik.handleChange} value={formik.values.userName}></input>
         </form>
 
     </div>
