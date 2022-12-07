@@ -1,4 +1,6 @@
-import SimpleRegister from './pages/SimpleRegister';
+import { Formik } from 'formik';
+// import SimpleRegister from './pages/SimpleRegister';
+import FormikComp from "./pages/FormikComp"
 
 function App() {
  
@@ -6,7 +8,8 @@ function App() {
   return (
     <div className="App">
      
-     <SimpleRegister/>
+     {/* <SimpleRegister/> */}
+     <FormikComp/>
     </div>
   );
 }

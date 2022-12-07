@@ -11,7 +11,7 @@ const initialValues = {
 
 const onSubmit = (values) => {console.log("formik", values)};
 
-const validatitonSchema = Yup.object({
+const validationSchema = Yup.object({
     name: Yup.string()
       .max(15, 'Must be 15 characters or less')
       .required('Required'),
@@ -27,7 +27,7 @@ function SimpleRegister() {
     const formik = useFormik({
         initialValues,
         onSubmit,
-        validatitonSchema,
+        validationSchema,
         // validate:values=>{
         //     let errors = {}
         //     if (!values.name) {
