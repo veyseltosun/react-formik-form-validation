@@ -37,14 +37,16 @@ function SimpleRegister() {
             <label htmlFor='name' >Name</label>
             <input type="text" id="name" name="name" 
             onChange={formik.handleChange} value={formik.values.name}></input>
+            {formik.errors.name?<div>{formik.errors.name}</div>: null}
 
             <label htmlFor='email' >Email</label>
             <input type="text" id="email" name="email" 
             onChange={formik.handleChange} value={formik.values.email}></input>
-
+            {formik.errors.email?<div>{formik.errors.email}</div>:null}
             <label htmlFor='userName' >User Name</label>
             <input type="text" id="userName" name="userName" 
             onChange={formik.handleChange} value={formik.values.userName}></input>
+            {formik.errors.userName ? <div>{formik.values.userName}</div>:null}
 
             <button className='btn-submit'>Submit</button>
         </form>
