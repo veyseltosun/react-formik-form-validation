@@ -1,31 +1,48 @@
 import React from 'react';
 import {useFormik} from "formik";
+import * as Yup from "yup";
 
+const initialValues = {
+    name:"",
+    email:"",
+    userName:"",
 
+};
+
+const onSubmit = (values) => {console.log("formik", values)};
+
+const validatitonSchema = Yup.object({
+    name: Yup.string()
+      .max(15, 'Must be 15 characters or less')
+      .required('Required'),
+    userName: Yup.string()
+      .max(20, 'Must be 20 characters or less')
+      .required('Required'),
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('Required')})
+      ;
 function SimpleRegister() {
     const formik = useFormik({
-        initialValues:{
-            name:"",
-            email:"",
-            userName:"",
-        },
-        onSubmit:values => {console.log("formik", values)},
-        validate:values=>{
-            let errors = {}
-            if (!values.name) {
-                errors.name = "Required. Please fill area."
-            }
-            if (!values.email) {
-                errors.email = "Required. Please fill area."
-            }
-            else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i.test(values.email)){
-                errors.email= "Invalid email address"
-            }
-            if (!values.userName) {
-                errors.userName = "Required. Please fill user name."
-            }
-            return errors
-        }
+        initialValues,
+        onSubmit,
+        validatitonSchema,
+        // validate:values=>{
+        //     let errors = {}
+        //     if (!values.name) {
+        //         errors.name = "Required. Please fill area."
+        //     }
+        //     if (!values.email) {
+        //         errors.email = "Required. Please fill area."
+        //     }
+        //     else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i.test(values.email)){
+        //         errors.email= "Invalid email address"
+        //     }
+        //     if (!values.userName) {
+        //         errors.userName = "Required. Please fill user name."
+        //     }
+        //     return errors
+        // }
          
     })
 
