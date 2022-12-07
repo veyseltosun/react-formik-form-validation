@@ -54,17 +54,29 @@ function SimpleRegister() {
         <h1>Simple Form</h1>
         <form className='formStyle' onSubmit={formik.handleSubmit}>
             <label htmlFor='name' >Name</label>
-            <input type="text" id="name" name="name" 
-            onChange={formik.handleChange} value={formik.values.name} onBlur={formik.handleBlur}></input>
+            <input type="text" 
+             id="name" 
+             name="name" 
+             onChange={formik.handleChange}
+             value={formik.values.name} 
+             onBlur={formik.handleBlur}></input>
             {formik.touched.name && formik.errors.name ? <div>{formik.errors.name}</div>: null}
 
             <label htmlFor='email' >Email</label>
-            <input type="text" id="email" name="email" onBlur={formik.handleBlur}
-            onChange={formik.handleChange} value={formik.values.email}></input>
+            <input type="text"
+             id="email" 
+             name="email"
+             onBlur={formik.handleBlur}
+             onChange={formik.handleChange}
+             value={formik.values.email}></input>
             {formik.errors.email ? <div>{formik.errors.email}</div>:null}
             <label htmlFor='userName' >User Name</label>
-            <input type="text" id="userName" name="userName" onBlur={formik.handleBlur}
-            onChange={formik.handleChange} value={formik.values.userName}></input>
+            <input type="text"
+             id="userName"
+             name="userName" 
+             onBlur={formik.handleBlur}
+             onChange={formik.handleChange}
+             value={formik.values.userName}></input>
             {formik.errors.userName ? <div>{formik.errors.userName}</div>:null}
 
             <button type='submit' className='btn-submit'>Submit</button>
