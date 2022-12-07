@@ -20,8 +20,9 @@ const validatitonSchema = Yup.object({
       .required('Required'),
     email: Yup.string()
       .email('Invalid email address')
-      .required('Required')})
-      ;
+      .required('Required')
+});
+      
 function SimpleRegister() {
     const formik = useFormik({
         initialValues,
