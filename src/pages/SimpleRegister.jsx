@@ -29,6 +29,10 @@ function SimpleRegister() {
          
     })
 
+    if(formik.errors.userName){
+        console.log(Error);
+    }
+
   return (
     <div className='container'>
 
@@ -46,9 +50,9 @@ function SimpleRegister() {
             <label htmlFor='userName' >User Name</label>
             <input type="text" id="userName" name="userName" 
             onChange={formik.handleChange} value={formik.values.userName}></input>
-            {formik.errors.userName ? <div>{formik.values.userName}</div>:null}
+            {formik.errors.userName ? <div>{formik.errors.userName}</div>:null}
 
-            <button className='btn-submit'>Submit</button>
+            <button type='submit' className='btn-submit'>Submit</button>
         </form>
 
     </div>
