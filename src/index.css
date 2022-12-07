@@ -20,7 +20,7 @@ code {
   margin: auto;
   padding: 15px;
   width: 60%;
-  height: 80%;
+  height: auto;
   background-color: aqua;
   display: flex;
   flex-direction: column;

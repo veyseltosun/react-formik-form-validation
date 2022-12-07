@@ -22,7 +22,7 @@ function SimpleRegister() {
                 errors.email= "Invalid email address"
             }
             if (!values.userName) {
-                errors.email = "Required. Please fill area."
+                errors.userName = "Required. Please fill user name."
             }
             return errors
         }
