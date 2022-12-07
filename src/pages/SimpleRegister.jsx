@@ -8,9 +8,27 @@ function SimpleRegister() {
             name:"",
             email:"",
             userName:"",
+        },
+        onSubmit:values => {console.log("formik", values)},
+        validate:values=>{
+            let errors = {}
+            if (!values.name) {
+                errors.name = "Required. Please fill area."
+            }
+            if (!values.email) {
+                errors.email = "Required. Please fill area."
+            }
+            else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i.test(values.email)){
+                errors.email= "Invalid email address"
+            }
+            if (!values.userName) {
+                errors.email = "Required. Please fill area."
+            }
+            return errors
         }
+         
     })
-    console.log("formik",formik.values)
+
   return (
     <div className='container'>
 
